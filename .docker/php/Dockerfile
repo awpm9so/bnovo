@@ -18,9 +18,6 @@ RUN apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev && \
 docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ && \
 docker-php-ext-install gd
 
-# redis
-RUN pecl install redis && docker-php-ext-enable redis
-
 # pcov
 RUN pecl install pcov && docker-php-ext-enable pcov
 

@@ -3,9 +3,11 @@
 ## Первый запуск
 1. `git clone https://github.com/awpm9so/bnovo.git`
 2. `cd bnovo`
-3. `docker compose up -d --build`
-4. `docker compose exec php bash`
-5. `composer setup`
+3. `cp .env.example .env`
+4. `docker compose up -d --build`
+5. `Заполнить своими значениями переменные окружения: DB_DATABASE, DB_USERNAME, DB_PASSWORD, PGADMIN_DEFAULT_EMAIL, PGADMIN_DEFAULT_PASSWORD (две последние для pgAdmin)`
+6. `docker compose exec php bash`
+7. `composer setup`
 
 ## Все последующие запуски
 1. `docker compose up -d`
